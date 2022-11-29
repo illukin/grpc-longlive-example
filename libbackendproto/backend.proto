@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package BackendProto;
+
+message InitConnect {}
+
+message Notification {}
+
+service RPC {
+  rpc Notify (InitConnect) returns (stream Notification) {}
+}
